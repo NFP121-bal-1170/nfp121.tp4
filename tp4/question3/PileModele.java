@@ -21,11 +21,23 @@ public class PileModele<T> extends  java.util.Observable implements PileI<T> {
     }
 
     public T depiler() throws PileVideException {
+        if (estVide()) throw new PileVideException();
+        
+        try{
+            return this.pile.depiler();
+        }catch(Exception e){
+            
+        }finally{
+            setChanged();
+            notifyObservers();
+        }
         return null;
+    
     }
 
     public T sommet() throws PileVideException {
-        return null;
+        if (estVide()) throw new PileVideException();
+        return  this.pile.sommet();
     }
 
     public int taille() {

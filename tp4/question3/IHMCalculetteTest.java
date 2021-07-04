@@ -51,7 +51,7 @@ public class IHMCalculetteTest extends junit.framework.TestCase{
      *
      * Méthode appelée après chaque appel de méthode de test.
      */
-    protected void tearDown(){ // throws java.lang.Exception
+    protected void tearDown() throws java.lang.Exception{ // throws java.lang.Exception
         f.dispose();
     }
 
@@ -127,7 +127,7 @@ public class IHMCalculetteTest extends junit.framework.TestCase{
     }
 
    
-	
+    
     public void test_IHMCalculette_MauvaisFormatDuNombre() throws Exception{
         try{
             Container panel = f.getContentPane();
